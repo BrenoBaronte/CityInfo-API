@@ -15,11 +15,5 @@ namespace CityInfo.API.Entities
         {
             Database.Migrate();
         }
-
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseSqlServer("connectionstring");
-        //    base.OnConfiguring(optionsBuilder);
-        //}
     }
 }

@@ -3,7 +3,6 @@ using CityInfo.API.Models;
 using CityInfo.API.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace CityInfo.API.Controllers
 {
@@ -20,7 +19,6 @@ namespace CityInfo.API.Controllers
         [HttpGet()]
         public IActionResult GetCities()
         {
-            //return Ok(CitiesDataStore.Current.Cities);
             var cityEntities = _cityInfoRepository.GetCities();
 
             var results = Mapper.Map<IEnumerable<CityWithoutPointsOfInterestDto>>(cityEntities);

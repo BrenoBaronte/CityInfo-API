@@ -10,10 +10,8 @@ namespace CityInfo.API
     {
         public static void EnsureSeedDataForContext(this CityInfoContext context)
         {
-            if (context.Cities.Any())
-                return;
+            if (context.Cities.Any()) return;
 
-            //init seed data
             var cities = new List<City>()
             {
                 new City()
